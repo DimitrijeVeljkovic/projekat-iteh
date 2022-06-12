@@ -26,10 +26,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('categories', CategoryController::class);
-Route::resource('products', ProductController::class);
-Route::resource('carts', CartController::class);
-Route::resource('users', UserController::class)->only(['index', 'show']);
-Route::resource('category/{id}/products', ProductFromCategoryController::class);
-Route::resource('product/{id}/category', CategoryFromProductController::class);
-Route::resource('users/{id}/cart', ProductInCartForUserController::class);
+Route::resource('categories', CategoryController::class)->only(['index', 'show']);
+Route::resource('products', ProductController::class)->only(['index', 'show']);
+Route::resource('carts', CartController::class)->only(['index', 'show', 'store', 'destroy']);
+Route::resource('users', UserController::class)->only(['index', 'show', 'update']);
+Route::resource('category/{id}/products', ProductFromCategoryController::class)->only(['index']);
+Route::resource('product/{id}/category', CategoryFromProductController::class)->only(['index']);
+Route::resource('users/{id}/cart', ProductInCartForUserController::class)->only(['index']);
