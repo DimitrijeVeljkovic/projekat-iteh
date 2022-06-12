@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\ProductCollection;
 
 class CartResource extends JsonResource
 {
@@ -19,7 +20,7 @@ class CartResource extends JsonResource
     {
         return [
             'cartId' => $this->resource->id,
-            'productId' => $this->resource->productId,
+            'product' => new ProductCollection($this->resource->product),
             'userId' => $this->resource->userId
         ];
     }

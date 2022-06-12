@@ -7,6 +7,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductFromCategoryController;
+use App\Http\Controllers\ProductInCartForUserController;
+use App\Http\Controllers\CategoryFromProductController;
 
 
 /*
@@ -29,3 +31,5 @@ Route::resource('products', ProductController::class);
 Route::resource('carts', CartController::class);
 Route::resource('users', UserController::class)->only(['index', 'show']);
 Route::resource('category/{id}/products', ProductFromCategoryController::class);
+Route::resource('product/{id}/category', CategoryFromProductController::class);
+Route::resource('users/{id}/cart', ProductInCartForUserController::class);
