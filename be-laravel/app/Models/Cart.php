@@ -11,6 +11,7 @@ class Cart extends Model
 {
     protected $table = 'carts';
     public $primaryKey = 'id';
+    protected $fillable = ['productId', 'userId'];
 
     public function product() {
         return $this->hasMany(Product::class, 'id');

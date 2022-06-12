@@ -37,7 +37,14 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cart_item = Cart::create([
+            'productId' => $request->productId,
+            'userId' => $request->userId
+        ]);
+
+        $cart_item->save();
+
+        return response()->json(['Cart item is created successfully.', new CartResource($cart_item)]);
     }
 
     /**
