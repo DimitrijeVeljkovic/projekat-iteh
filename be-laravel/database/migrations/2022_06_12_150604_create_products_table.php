@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('ram');
             $table->string('size');
             $table->string('color');
+            $table->foreignId('categoryId');
             $table->timestamps();
         });
     }
