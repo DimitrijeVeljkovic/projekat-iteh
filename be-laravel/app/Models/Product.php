@@ -13,10 +13,10 @@ class Product extends Model
     public $primaryKey = 'id';
 
     public function category() {
-        $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class);
     }
 
     public function cart() {
-        $this->belongsTo(Cart::class);
+        return $this->belongsTo(Cart::class);
     }
 }

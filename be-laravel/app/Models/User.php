@@ -44,6 +44,6 @@ class User extends Authenticatable
     ];
 
     public function cart() {
-        $this->belongsTo(Cart::class);
+        return $this->belongsTo(Cart::class);
     }
 }
