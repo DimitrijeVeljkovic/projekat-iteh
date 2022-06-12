@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\UserController;
 
 
 /*
@@ -25,3 +26,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::resource('categories', CategoryController::class);
 Route::resource('products', ProductController::class);
 Route::resource('carts', CartController::class);
+Route::resource('users', UserController::class)->only(['index', 'show']);
