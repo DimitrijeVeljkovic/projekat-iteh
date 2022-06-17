@@ -1,0 +1,33 @@
+:host {
+    .product {
+        min-width: 270px;
+        max-width: 400px;
+        box-shadow: 10px 10px 10px gray;
+        margin: auto;
+        border: 1px solid gray;
+        padding-bottom: 30px;
+
+        img {
+            width: 250px;
+            margin: 0 auto;
+        }
+
+        mat-card-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        mat-card-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            .price {
+                font-size: 24px;
+                font-weight: 700;
+            }
+        }
+    }
+}
