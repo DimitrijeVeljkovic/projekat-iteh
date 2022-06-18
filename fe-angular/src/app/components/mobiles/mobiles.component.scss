@@ -1,8 +1,9 @@
 :host {
-    .product-list {
+    .mobile-list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
-        margin: 100px 30px 30px 30px;
+        margin: 30px 30px 30px 30px;
+        padding-bottom: 60px;
     }
 }

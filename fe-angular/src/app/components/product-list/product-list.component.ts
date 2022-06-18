@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../services/data.service';
+import { ALL_PRODUCTS_HEADING } from 'src/app/constants/app.constants';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-product-list',
@@ -8,6 +9,7 @@ import { DataService } from '../services/data.service';
 })
 export class ProductListComponent implements OnInit {
   public allProducts: any;
+  public heading = ALL_PRODUCTS_HEADING;
 
   constructor(private _dataService: DataService) { }
 

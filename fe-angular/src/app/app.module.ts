@@ -6,12 +6,19 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MaterialModule } from './material/material.module';
-import { HeaderComponent } from './header/header.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductComponent } from './product-list/product/product.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductComponent } from './components/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PricePipe } from './pipes/price.pipe';
 import { InchesPipe } from './pipes/inches.pipe';
+import { MobilesComponent } from './components/mobiles/mobiles.component';
+import { LaptopsComponent } from './components/laptops/laptops.component';
+import { TabletsComponent } from './components/tablets/tablets.component';
+import { CategoryHeadingComponent } from './components/category-heading/category-heading.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ContactItemComponent } from './components/contact-item/contact-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +27,14 @@ import { InchesPipe } from './pipes/inches.pipe';
     ProductListComponent,
     ProductComponent,
     PricePipe,
-    InchesPipe
+    InchesPipe,
+    MobilesComponent,
+    LaptopsComponent,
+    TabletsComponent,
+    CategoryHeadingComponent,
+    FooterComponent,
+    ContactComponent,
+    ContactItemComponent
   ],
   imports: [
     BrowserModule,
