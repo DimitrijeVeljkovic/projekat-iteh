@@ -11,3 +11,5 @@ export const LAPTOP_CAT_HEADING = 'LAPTOPS';
 export const MOBILE_CAT_HEADING = 'MOBILES';
 export const TABLET_CAT_HEADING = 'TABLETS';
 export const ALL_PRODUCTS_HEADING = 'ALL PRODUCTS';
+
+export const API_KEY = 'AIzaSyBqJah-oSjcjnP_srwEZ9g5QwPK-Cjkcm0';

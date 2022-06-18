@@ -17,6 +17,8 @@ import { LaptopsComponent } from './components/laptops/laptops.component';
 import { TabletsComponent } from './components/tablets/tablets.component';
 import { CategoryHeadingComponent } from './components/category-heading/category-heading.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ContactItemComponent } from './components/contact-item/contact-item.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { FooterComponent } from './components/footer/footer.component';
     LaptopsComponent,
     TabletsComponent,
     CategoryHeadingComponent,
-    FooterComponent
+    FooterComponent,
+    ContactComponent,
+    ContactItemComponent
   ],
   imports: [
     BrowserModule,
