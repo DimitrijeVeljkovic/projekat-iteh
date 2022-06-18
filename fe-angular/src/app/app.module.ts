@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PricePipe } from './pipes/price.pipe';
 import { InchesPipe } from './pipes/inches.pipe';
 import { MobilesComponent } from './mobiles/mobiles.component';
+import { LaptopsComponent } from './laptops/laptops.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MobilesComponent } from './mobiles/mobiles.component';
     ProductComponent,
     PricePipe,
     InchesPipe,
-    MobilesComponent
+    MobilesComponent,
+    LaptopsComponent
   ],
   imports: [
     BrowserModule,

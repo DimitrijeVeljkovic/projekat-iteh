@@ -1,0 +1,17 @@
+<div class="heading">
+    <h1>LAPTOPS</h1>
+</div>
+<div class="laptop-list">
+    <app-product 
+        *ngFor="let laptop of laptops?.products"
+        [productId]="laptop.productId"
+        [productName]="laptop.productName"
+        [price]="laptop.price"
+        [ram]="laptop.ram"
+        [size]="laptop.size"
+        [color]="laptop.color"
+        [imageUrl]="laptop.imageUrl"
+        [categoryId]="laptop.categoryId">
+    </app-product>
+</div>
+
