@@ -16,14 +16,11 @@
 
             a {
                 margin-left: 20px;
-                width: 130px;
-                position: relative;
+                width: 110px;
+            }
 
-                mat-icon {
-                    position: absolute;
-                    left: 5px;
-                    top: 7px;
-                }
+            .icon {
+                width: 70px;
             }
 
             .active {
