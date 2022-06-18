@@ -16,6 +16,7 @@ import { MobilesComponent } from './components/mobiles/mobiles.component';
 import { LaptopsComponent } from './components/laptops/laptops.component';
 import { TabletsComponent } from './components/tablets/tablets.component';
 import { CategoryHeadingComponent } from './components/category-heading/category-heading.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CategoryHeadingComponent } from './components/category-heading/category
     MobilesComponent,
     LaptopsComponent,
     TabletsComponent,
-    CategoryHeadingComponent
+    CategoryHeadingComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
