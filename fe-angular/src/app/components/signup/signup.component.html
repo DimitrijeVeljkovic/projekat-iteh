@@ -1,11 +1,16 @@
-<div class="login-page">
+<div class="signup-page">
     <mat-card>
-        <mat-card-title>LOG IN</mat-card-title>
-        <mat-card-content>
+        <mat-card-title>SIGN UP</mat-card-title>
+        <mat-card-content class="signup-content">
             <mat-form-field appearance="legacy">
                 <mat-label>Email</mat-label>
                 <input matInput placeholder="Enter your email">
                 <mat-icon matSuffix> email </mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Enter your name">
+                <mat-icon matSuffix> person </mat-icon>
             </mat-form-field>
             <mat-form-field appearance="legacy">
                 <mat-label>Password</mat-label>
@@ -14,7 +19,7 @@
             </mat-form-field>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button color="primary" class="action-button"> Log In </button>
+            <button mat-raised-button color="primary" class="action-button"> Sign Up </button>
         </mat-card-actions>
     </mat-card>
 </div>

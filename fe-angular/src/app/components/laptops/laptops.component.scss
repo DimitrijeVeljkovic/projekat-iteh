@@ -1,9 +1,7 @@
+@import '../../mixins/base.scss';
+
 :host {
     .laptop-list {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
-        margin: 30px 30px 30px 30px;
-        padding-bottom: 60px;
+        @include products-style;
     }
 }

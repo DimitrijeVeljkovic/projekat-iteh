@@ -1,7 +1,7 @@
 @import '../../mixins/base.scss';
 
 :host {
-    .login-page {
+    .signup-page {
         @include login-and-register-style;
     }
 }
