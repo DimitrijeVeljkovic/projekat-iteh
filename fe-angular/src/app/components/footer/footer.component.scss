@@ -10,6 +10,7 @@
         bottom: 0;
         z-index: 100;
         color: white;
+        box-shadow: 0px -5px 8px rgba(#000000, 0.4);
 
         .contact {
             margin-left: 30px;
@@ -18,7 +19,6 @@
         }
 
         .rights {
-            margin-right: 30px;
             display: flex;
             align-items: center;
             gap: 5px;
@@ -26,6 +26,14 @@
             span {
                 font-size: 16px;
             }
+        }
+
+        .toggle {
+            margin-right: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
         }
     }
 }
