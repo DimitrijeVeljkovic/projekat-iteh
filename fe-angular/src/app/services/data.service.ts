@@ -17,4 +17,8 @@ export class DataService {
   public getCategoryForProduct(productId: number) {
     return this._http.get(`${this.baseUrl}/product/${productId}/category`);
   }
+
+  public getAllProductsFromCategory(categoryId: number) {
+    return this._http.get(`${this.baseUrl}/category/${categoryId}/products`);
+  }
 }

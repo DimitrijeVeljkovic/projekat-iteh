@@ -1,0 +1,17 @@
+<div class="heading">
+    <h1>MOBILES</h1>
+</div>
+<div class="mobile-list">
+    <app-product 
+        *ngFor="let mobile of mobiles?.products"
+        [productId]="mobile.productId"
+        [productName]="mobile.productName"
+        [price]="mobile.price"
+        [ram]="mobile.ram"
+        [size]="mobile.size"
+        [color]="mobile.color"
+        [imageUrl]="mobile.imageUrl"
+        [categoryId]="mobile.categoryId">
+    </app-product>
+</div>
+

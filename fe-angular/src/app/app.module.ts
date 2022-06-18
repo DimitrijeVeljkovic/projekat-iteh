@@ -8,10 +8,11 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MaterialModule } from './material/material.module';
 import { HeaderComponent } from './header/header.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ProductComponent } from './product-list/product/product.component';
+import { ProductComponent } from './product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PricePipe } from './pipes/price.pipe';
 import { InchesPipe } from './pipes/inches.pipe';
+import { MobilesComponent } from './mobiles/mobiles.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { InchesPipe } from './pipes/inches.pipe';
     ProductListComponent,
     ProductComponent,
     PricePipe,
-    InchesPipe
+    InchesPipe,
+    MobilesComponent
   ],
   imports: [
     BrowserModule,
