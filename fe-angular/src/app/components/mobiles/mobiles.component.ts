@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MOBILE_CAT_ID } from '../constants/app.constants';
-import { DataService } from '../services/data.service';
+import { MOBILE_CAT_ID } from '../../constants/app.constants';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-mobiles',

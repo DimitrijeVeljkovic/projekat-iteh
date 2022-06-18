@@ -6,14 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MaterialModule } from './material/material.module';
-import { HeaderComponent } from './header/header.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductComponent } from './product/product.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductComponent } from './components/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PricePipe } from './pipes/price.pipe';
 import { InchesPipe } from './pipes/inches.pipe';
-import { MobilesComponent } from './mobiles/mobiles.component';
-import { LaptopsComponent } from './laptops/laptops.component';
+import { MobilesComponent } from './components/mobiles/mobiles.component';
+import { LaptopsComponent } from './components/laptops/laptops.component';
 
 @NgModule({
   declarations: [

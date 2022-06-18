@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LAPTOP_CAT_ID } from '../constants/app.constants';
-import { DataService } from '../services/data.service';
+import { LAPTOP_CAT_ID } from '../../constants/app.constants';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-laptops',
