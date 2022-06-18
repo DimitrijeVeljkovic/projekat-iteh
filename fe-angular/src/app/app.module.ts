@@ -15,6 +15,7 @@ import { InchesPipe } from './pipes/inches.pipe';
 import { MobilesComponent } from './components/mobiles/mobiles.component';
 import { LaptopsComponent } from './components/laptops/laptops.component';
 import { TabletsComponent } from './components/tablets/tablets.component';
+import { CategoryHeadingComponent } from './components/category-heading/category-heading.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TabletsComponent } from './components/tablets/tablets.component';
     InchesPipe,
     MobilesComponent,
     LaptopsComponent,
-    TabletsComponent
+    TabletsComponent,
+    CategoryHeadingComponent
   ],
   imports: [
     BrowserModule,

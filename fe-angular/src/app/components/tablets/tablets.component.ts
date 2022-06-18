@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TABLET_CAT_ID } from 'src/app/constants/app.constants';
+import { TABLET_CAT_HEADING, TABLET_CAT_ID } from 'src/app/constants/app.constants';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class TabletsComponent implements OnInit {
   public tablets: any;
+  public heading = TABLET_CAT_HEADING;
 
   constructor(private _dataService: DataService) { }
 
