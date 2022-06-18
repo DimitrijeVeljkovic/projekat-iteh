@@ -12,4 +12,4 @@ export const MOBILE_CAT_HEADING = 'MOBILES';
 export const TABLET_CAT_HEADING = 'TABLETS';
 export const ALL_PRODUCTS_HEADING = 'ALL PRODUCTS';
 
-export const API_KEY = 'AIzaSyBqJah-oSjcjnP_srwEZ9g5QwPK-Cjkcm0';
+export const API_KEY = API_KEY_GOOGLE;
