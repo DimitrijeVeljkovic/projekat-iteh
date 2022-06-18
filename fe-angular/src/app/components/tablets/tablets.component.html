@@ -1,0 +1,16 @@
+<div class="heading">
+    <h1>TABLETS</h1>
+</div>
+<div class="tablet-list">
+    <app-product 
+        *ngFor="let tablet of tablets?.products"
+        [productId]="tablet.productId"
+        [productName]="tablet.productName"
+        [price]="tablet.price"
+        [ram]="tablet.ram"
+        [size]="tablet.size"
+        [color]="tablet.color"
+        [imageUrl]="tablet.imageUrl"
+        [categoryId]="tablet.categoryId">
+    </app-product>
+</div>

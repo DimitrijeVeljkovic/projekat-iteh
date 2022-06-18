@@ -14,6 +14,7 @@ import { PricePipe } from './pipes/price.pipe';
 import { InchesPipe } from './pipes/inches.pipe';
 import { MobilesComponent } from './components/mobiles/mobiles.component';
 import { LaptopsComponent } from './components/laptops/laptops.component';
+import { TabletsComponent } from './components/tablets/tablets.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LaptopsComponent } from './components/laptops/laptops.component';
     PricePipe,
     InchesPipe,
     MobilesComponent,
-    LaptopsComponent
+    LaptopsComponent,
+    TabletsComponent
   ],
   imports: [
     BrowserModule,
