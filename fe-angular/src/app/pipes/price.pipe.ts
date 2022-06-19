@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class PricePipe implements PipeTransform {
 
-  transform(value: number): string {
+  transform(value: string): string {
     return `${value}RSD`;
   }
 

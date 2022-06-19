@@ -10,7 +10,7 @@
         <span> Size: {{ size | inches }} </span>
     </mat-card-content>
     <mat-card-actions>
-        <span class="price"> {{ price | pricePipe }} </span>
+        <span class="price"> {{ price | thousandSeparator | pricePipe }} </span>
         <button mat-raised-button color="primary"> <mat-icon>add_shopping_cart</mat-icon>  Add To Cart </button>
     </mat-card-actions>
 </mat-card>
