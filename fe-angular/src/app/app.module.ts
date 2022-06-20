@@ -22,6 +22,8 @@ import { ContactItemComponent } from './components/contact-item/contact-item.com
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ThousandSeparatorPipe } from './pipes/thousand-separator.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SortProductsComponent } from './components/sort-products/sort-products.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { ThousandSeparatorPipe } from './pipes/thousand-separator.pipe';
     ContactItemComponent,
     LoginComponent,
     SignupComponent,
-    ThousandSeparatorPipe
+    ThousandSeparatorPipe,
+    SortProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,9 @@ import { ThousandSeparatorPipe } from './pipes/thousand-separator.pipe';
     BrowserAnimationsModule,
     MatSliderModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

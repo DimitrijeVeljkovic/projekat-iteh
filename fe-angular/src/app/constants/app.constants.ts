@@ -15,3 +15,10 @@ export const TABLET_CAT_HEADING = 'TABLETS';
 export const ALL_PRODUCTS_HEADING = 'ALL PRODUCTS';
 
 export const API_KEY = API_KEY_GOOGLE;
+
+export const SORT = {
+    priceAsc: 'PRICE_ASC',
+    priceDesc: 'PRICE_DESC',
+    nameAsc: 'NAME_ASC',
+    nameDesc: 'NAME_DESC'
+};
