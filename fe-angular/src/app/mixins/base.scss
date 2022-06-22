@@ -29,6 +29,11 @@
 
             mat-form-field {
                  width: 300px;
+
+                 mat-hint {
+                    color: #cc3300;
+                    font-size: 12px;
+                 }
             }
         }
 
