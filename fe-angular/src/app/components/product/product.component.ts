@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-product',
@@ -18,10 +19,15 @@ export class ProductComponent implements OnInit {
 
   public category: any;
 
-  constructor(private _dataService: DataService) { }
+  constructor(private _dataService: DataService,
+              private _userService: UserService) { }
 
   ngOnInit(): void {
     this.categoryForProduct().subscribe(result => this.category = result);
+  }
+
+  get userLoggedIn() {
+    return this._userService.getUser();
   }
 
   public categoryForProduct() {

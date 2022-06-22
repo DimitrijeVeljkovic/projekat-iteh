@@ -32,11 +32,15 @@
         }
 
         &__auth {
-            padding-right: 20px;
+            padding-right: 30px;
 
             a {
                 margin-right: 10px;
                 width: 80px;
+            }
+
+            .icon-right {
+                width: 36px;
             }
         }
 
