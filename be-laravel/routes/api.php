@@ -33,10 +33,7 @@ Route::resource('category/{id}/products', ProductFromCategoryController::class)-
 Route::resource('product/{id}/category', CategoryFromProductController::class)->only(['index']);
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
-
-Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::post('/logout', [AuthController::class, 'logout']);
-    Route::resource('carts', CartController::class)->only(['index', 'show', 'store', 'destroy']);
-    Route::resource('users', UserController::class)->only(['index', 'show', 'update']);
-    Route::resource('users/{id}/cart', ProductInCartForUserController::class)->only(['index']);
-});
+Route::post('/logout', [AuthController::class, 'logout']);
+Route::resource('carts', CartController::class)->only(['index', 'show', 'store', 'destroy']);
+Route::resource('users', UserController::class)->only(['index', 'show', 'update']);
+Route::resource('users/{id}/cart', ProductInCartForUserController::class)->only(['index']);
