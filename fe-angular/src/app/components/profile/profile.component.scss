@@ -1,0 +1,25 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+
+    .user-info {
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+
+    .data-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 300px;
+
+        mat-hint {
+            color: #cc3300;
+            font-size: 12px;
+        }
+    }
+}

@@ -1,1 +1,42 @@
-<p>profile works!</p>
+<div class="profile">
+    <mat-card class="user-info">
+        <mat-card-title>
+            User Info
+        </mat-card-title>
+        <mat-card-content>
+            <h3> ID: {{ userData?.user?.id }} </h3>
+            <h3> Name: {{ userData?.user?.name }} </h3>
+            <h3> Email: {{ userData?.user?.email }} </h3>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Change user data
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <form [formGroup]="changeDataForm" class="data-form">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Name</mat-label>
+                    <input type="text" matInput placeholder="Enter your name" formControlName="name">
+                    <mat-icon matSuffix> face </mat-icon>
+                </mat-form-field>
+                <mat-form-field appearance="legacy">
+                    <mat-label>Email</mat-label>
+                    <input type="text" matInput placeholder="Enter your email" formControlName="email">
+                    <mat-icon matSuffix> email </mat-icon>
+                    <mat-hint *ngIf="invalidEmail">Email is invalid.</mat-hint>
+                </mat-form-field>
+                <button type="submit" 
+                        mat-raised-button 
+                        color="primary" 
+                        class="action-button" 
+                        [disabled]="!validForm">
+                    Change
+                </button>
+            </form>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
