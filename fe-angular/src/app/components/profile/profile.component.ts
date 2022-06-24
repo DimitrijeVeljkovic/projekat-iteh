@@ -10,6 +10,8 @@ import { UserService } from 'src/app/services/user.service';
 export class ProfileComponent implements OnInit {
   public userData: any;
   public changeDataForm: FormGroup;
+  public loading = false;
+  public successfulMessage = null;
 
   constructor(private _userService: UserService,
               private _formBuilder: FormBuilder) { }
@@ -17,7 +19,6 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.getUserDataFromService().subscribe(result => {
       this.userData = result;
-      console.log(this.userData);
     });
 
     this.changeDataForm = this._formBuilder.group({
@@ -27,7 +28,6 @@ export class ProfileComponent implements OnInit {
   }
 
   public get validForm() {
-    console.log(this.changeDataForm);
     return this.changeDataForm.valid;
   }
 
@@ -42,5 +42,19 @@ export class ProfileComponent implements OnInit {
 
   public getUserDataFromService() {
     return this._userService.userData();
+  }
+
+  public onSubmit() {
+    const formValue = this.changeDataForm.value;
+    this.loading = true;
+
+    this._userService.updateUserData(formValue).subscribe(result => {
+      console.log(this.changeDataForm.value);
+      this.userData.user.name = (result as Array<any>)[1].name;
+      this.userData.user.email = (result as Array<any>)[1].email;
+      this.successfulMessage = formValue.email !== '' || formValue.name !== '' ? (result as Array<any>)[0] : null;
+      this.changeDataForm.reset();
+      this.loading = false;
+    });
   }
 }

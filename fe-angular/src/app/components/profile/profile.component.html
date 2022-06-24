@@ -17,7 +17,7 @@
                     Change user data
                 </mat-panel-title>
             </mat-expansion-panel-header>
-            <form [formGroup]="changeDataForm" class="data-form">
+            <form [formGroup]="changeDataForm" class="data-form" (ngSubmit)="onSubmit()">
                 <mat-form-field appearance="legacy">
                     <mat-label>Name</mat-label>
                     <input type="text" matInput placeholder="Enter your name" formControlName="name">
@@ -34,8 +34,15 @@
                         color="primary" 
                         class="action-button" 
                         [disabled]="!validForm">
-                    Change
+                    <span *ngIf="!loading; else spinner"> Change </span>
+                    <ng-template #spinner>
+                        <mat-spinner color="accent" [diameter]="35"></mat-spinner>
+                    </ng-template>
                 </button>
+                <div class="successful-message" *ngIf="successfulMessage"> 
+                    <mat-icon>check_circle_outline</mat-icon>
+                    <span> {{ successfulMessage }} </span>
+                </div>
             </form>
         </mat-expansion-panel>
     </mat-accordion>
