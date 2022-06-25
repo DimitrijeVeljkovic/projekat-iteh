@@ -14,4 +14,8 @@ export class CartService {
   public addProduct(prodId: number, usId: number) {
     return this._http.post(`${this.baseUrl}/carts`, { productId: prodId, userId: usId });
   }
+
+  public getCartItems(usId: number) {
+    return this._http.get(`${this.baseUrl}/users/${usId}/cart`);
+  }
 }

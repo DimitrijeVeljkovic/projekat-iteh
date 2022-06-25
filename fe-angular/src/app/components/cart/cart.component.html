@@ -1,1 +1,24 @@
-<p>cart works!</p>
+<div class="cart">
+    <div class="cart__items">
+        <app-cart-item 
+            *ngFor="let item of cartItems"
+            [product]="item.product">
+        </app-cart-item>
+    </div>
+    <div class="cart__checkout">
+        <mat-card>
+            <mat-card-title>
+                Checkout
+            </mat-card-title>
+            <mat-card-content>
+                <h2> Total price:  </h2>
+                <form>
+                    <mat-radio-group>
+                        <mat-radio-button> Cash </mat-radio-button>
+                        <mat-radio-button> Card </mat-radio-button>
+                    </mat-radio-group>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

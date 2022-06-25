@@ -1,0 +1,18 @@
+:host {
+    .cart {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: calc(100vh - 200px);
+        width: 100vw;
+        padding: 100px 0;
+        gap: 30px;
+
+        &__items {
+            margin-left: 30px;
+        }
+
+        &__checkout {
+            margin-right: 30px;
+        }
+    }
+}
