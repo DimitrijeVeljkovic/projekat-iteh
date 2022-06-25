@@ -49,10 +49,9 @@ export class ProfileComponent implements OnInit {
     this.loading = true;
 
     this._userService.updateUserData(formValue).subscribe(result => {
-      console.log(this.changeDataForm.value);
       this.userData.user.name = (result as Array<any>)[1].name;
       this.userData.user.email = (result as Array<any>)[1].email;
-      this.successfulMessage = formValue.email !== '' || formValue.name !== '' ? (result as Array<any>)[0] : null;
+      this.successfulMessage = formValue.email || formValue.name ? (result as Array<any>)[0] : null;
       this.changeDataForm.reset();
       this.loading = false;
     });
