@@ -20,7 +20,7 @@ class CartResource extends JsonResource
     {
         return [
             'cartId' => $this->resource->id,
-            'product' => new ProductCollection($this->resource->product),
+            'productId' => $this->resource->productId,
             'userId' => $this->resource->userId
         ];
     }
