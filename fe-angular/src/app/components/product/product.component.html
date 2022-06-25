@@ -11,6 +11,6 @@
     </mat-card-content>
     <mat-card-actions>
         <span class="price"> {{ price | thousandSeparator | pricePipe }} </span>
-        <button mat-raised-button color="primary" *ngIf="userLoggedIn"> <mat-icon>add_shopping_cart</mat-icon>  Add To Cart </button>
+        <button mat-raised-button color="primary" *ngIf="userLoggedIn" (click)="addToCart()"> <mat-icon>add_shopping_cart</mat-icon>  Add To Cart </button>
     </mat-card-actions>
 </mat-card>

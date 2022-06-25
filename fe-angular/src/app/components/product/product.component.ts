@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { CartService } from 'src/app/services/cart.service';
 import { DataService } from 'src/app/services/data.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -20,7 +22,9 @@ export class ProductComponent implements OnInit {
   public category: any;
 
   constructor(private _dataService: DataService,
-              private _userService: UserService) { }
+              private _userService: UserService,
+              private _cartService: CartService,
+              private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.categoryForProduct().subscribe(result => this.category = result);
@@ -32,5 +36,15 @@ export class ProductComponent implements OnInit {
 
   public categoryForProduct() {
     return this._dataService.getCategoryForProduct(this.productId);
+  }
+
+  public addToCart() {
+    this._cartService.addProduct(this.productId, this._userService.getUserId()).subscribe(
+      result => {
+        this._snackBar.open((result as Array<any>)[0], 'Close', {
+          duration: 1000
+        });
+      }
+    );
   }
 }
