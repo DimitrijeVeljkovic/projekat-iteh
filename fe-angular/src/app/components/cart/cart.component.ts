@@ -23,6 +23,18 @@ export class CartComponent implements OnInit {
       method: ['', Validators.required]
     });
 
+    this.getCartItems();
+  }
+
+  get totalPrice(): number {
+    return this.cartItems ? this.cartItems.reduce((partialSum: number, a: any) => partialSum + a.product.price, 0) : 0;
+  }
+
+  get validForm() {
+    return this.paymentForm.valid;
+  }
+
+  public getCartItems() {
     this._cartService.getCartItems(this._userService.getUserId()).subscribe(
       result => {
         this.cartItems = Array.isArray(result) ? result : 
@@ -32,14 +44,6 @@ export class CartComponent implements OnInit {
         this.cartItems = null;
       }
     );
-  }
-
-  get totalPrice(): number {
-    return this.cartItems ? this.cartItems.reduce((partialSum: number, a: any) => partialSum + a.product.price, 0) : 0;
-  }
-
-  get validForm() {
-    return this.paymentForm.valid;
   }
 
 }

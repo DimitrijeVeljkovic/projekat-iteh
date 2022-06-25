@@ -18,4 +18,8 @@ export class CartService {
   public getCartItems(usId: number) {
     return this._http.get(`${this.baseUrl}/users/${usId}/cart`);
   }
+
+  public deleteCartItem(id: number) {
+    return this._http.delete(`${this.baseUrl}/carts/${id}`);
+  }
 }

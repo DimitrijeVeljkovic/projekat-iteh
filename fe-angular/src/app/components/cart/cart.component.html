@@ -2,7 +2,9 @@
     <div class="cart__items">
         <app-cart-item 
             *ngFor="let item of cartItems"
-            [product]="item.product">
+            [product]="item.product"
+            [cartItemId]="item.id"
+            (showNewItems)="getCartItems()">
         </app-cart-item>
     </div>
     <div class="cart__checkout">

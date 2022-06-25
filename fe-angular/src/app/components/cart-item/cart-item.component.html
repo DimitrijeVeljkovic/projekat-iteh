@@ -9,5 +9,5 @@
         </div>
         <span class="price"> {{ product.price | thousandSeparator | pricePipe }} </span>
     </mat-card-content>
-    <button mat-mini-fab color="warn" class="remove"><mat-icon>remove_shopping_cart</mat-icon></button>
+    <button mat-mini-fab color="warn" class="remove" (click)="onRemove()"><mat-icon>remove_shopping_cart</mat-icon></button>
 </mat-card>

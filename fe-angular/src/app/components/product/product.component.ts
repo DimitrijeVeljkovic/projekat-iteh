@@ -42,7 +42,7 @@ export class ProductComponent implements OnInit {
     this._cartService.addProduct(this.productId, this._userService.getUserId()).subscribe(
       result => {
         this._snackBar.open((result as Array<any>)[0], 'Close', {
-          duration: 1000
+          duration: 1500
         });
       }
     );
