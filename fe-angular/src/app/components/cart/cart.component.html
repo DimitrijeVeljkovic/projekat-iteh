@@ -1,4 +1,4 @@
-<div class="cart">
+<div class="cart" *ngIf="cartItems; else emptyCart">
     <div class="cart__items">
         <app-cart-item 
             *ngFor="let item of cartItems"
@@ -31,3 +31,11 @@
         </mat-card>
     </div>
 </div>
+<ng-template #emptyCart>
+    <div class="empty-cart">
+        <h1>
+            Cart is empty!
+        </h1>
+    </div>
+</ng-template>
+

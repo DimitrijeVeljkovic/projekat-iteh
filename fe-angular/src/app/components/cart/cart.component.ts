@@ -25,14 +25,17 @@ export class CartComponent implements OnInit {
 
     this._cartService.getCartItems(this._userService.getUserId()).subscribe(
       result => {
-        console.log(result);
-        this.cartItems = result;
+        this.cartItems = Array.isArray(result) ? result : 
+          Object.keys(result).map(key => (result as any)[key]);
+      },
+      error => {
+        this.cartItems = null;
       }
     );
   }
 
   get totalPrice(): number {
-    return this.cartItems.reduce((partialSum: number, a: any) => partialSum + a.product.price, 0);
+    return this.cartItems ? this.cartItems.reduce((partialSum: number, a: any) => partialSum + a.product.price, 0) : 0;
   }
 
   get validForm() {

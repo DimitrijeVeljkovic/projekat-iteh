@@ -16,8 +16,8 @@ class ProductInCartForUserController extends Controller
             return response()->json('No data!', 404);
         }
 
-        for($i = 0; $i < count($cart_items); $i++) {
-            $cart_items[$i]['product'] = Product::get()->where('id', $cart_items[$i]['productId'])[strval($cart_items[$i]['productId'] - 1)];
+        foreach($cart_items as $item) {
+            $item['product'] = Product::get()->where('id', $item['productId'])[strval($item['productId'] - 1)];
         }
 
         return $cart_items;

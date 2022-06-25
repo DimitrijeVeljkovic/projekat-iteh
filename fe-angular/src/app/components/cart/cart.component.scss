@@ -18,7 +18,6 @@
 
         &__checkout {
             margin-right: 30px;
-            align-self: center;
             
             mat-card {
                 box-shadow: 5px 5px 5px rgba(#000000, 0.4);
@@ -57,5 +56,13 @@
                 }
             }
         }
+    }
+
+    .empty-cart {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
