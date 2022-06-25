@@ -1,1 +1,13 @@
-<p>cart-item works!</p>
+<mat-card>
+    <mat-card-title> {{ product.productName }} </mat-card-title>
+    <mat-card-content>
+        <img mat-card-image src={{product.imageUrl}} alt={{product.productName}}>
+        <div class="product-info">
+            <span> Ram: {{ product.ram }} </span>
+            <span> Color: {{ product.color }} </span>
+            <span> Size: {{ product.size | inches }} </span>
+        </div>
+        <span class="price"> {{ product.price | thousandSeparator | pricePipe }} </span>
+    </mat-card-content>
+    <button mat-mini-fab color="warn" class="remove"><mat-icon>remove_shopping_cart</mat-icon></button>
+</mat-card>
