@@ -25,6 +25,8 @@ import { ThousandSeparatorPipe } from './pipes/thousand-separator.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SortProductsComponent } from './components/sort-products/sort-products.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     SignupComponent,
     ThousandSeparatorPipe,
     SortProductsComponent,
-    ProfileComponent
+    ProfileComponent,
+    CartComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,
