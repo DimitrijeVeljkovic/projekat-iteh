@@ -10,15 +10,24 @@
             <mat-card-title>
                 Checkout
             </mat-card-title>
-            <mat-card-content>
-                <h2> Total price:  </h2>
-                <form>
-                    <mat-radio-group>
-                        <mat-radio-button> Cash </mat-radio-button>
-                        <mat-radio-button> Card </mat-radio-button>
-                    </mat-radio-group>
-                </form>
-            </mat-card-content>
+            <form [formGroup]="paymentForm">
+                <mat-card-content>
+                    <div>
+                        <label>Payment method:</label>
+                        <mat-radio-group class="payment" formControlName="method">
+                            <mat-radio-button color="primary" [value]="paymentMethod.cash"> Cash </mat-radio-button>
+                            <mat-radio-button color="primary" [value]="paymentMethod.card"> Card </mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <div>
+                        <h2> Total price: </h2>
+                        <span class="price"> {{ totalPrice | thousandSeparator | pricePipe }} </span>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" class="checkout-btn" [disabled]="!validForm"> Checkout </button>
+                </mat-card-actions>
+            </form>
         </mat-card>
     </div>
 </div>

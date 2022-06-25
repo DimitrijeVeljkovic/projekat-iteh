@@ -22,3 +22,8 @@ export const SORT = {
     nameAsc: 'NAME_ASC',
     nameDesc: 'NAME_DESC'
 };
+
+export const PAYMENT = {
+    cash: 'CASH',
+    card: 'CARD'
+}
