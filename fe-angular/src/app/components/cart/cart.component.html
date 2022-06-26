@@ -12,7 +12,7 @@
             <mat-card-title>
                 Checkout
             </mat-card-title>
-            <form [formGroup]="paymentForm">
+            <form [formGroup]="paymentForm" (ngSubmit)="onCheckout()">
                 <mat-card-content>
                     <div>
                         <label>Payment method:</label>
@@ -27,7 +27,14 @@
                     </div>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-raised-button color="primary" class="checkout-btn" [disabled]="!validForm"> Checkout </button>
+                    <button
+                        type="submit" 
+                        mat-raised-button 
+                        color="primary" 
+                        class="checkout-btn" 
+                        [disabled]="!validForm"> 
+                        Checkout
+                    </button>
                 </mat-card-actions>
             </form>
         </mat-card>

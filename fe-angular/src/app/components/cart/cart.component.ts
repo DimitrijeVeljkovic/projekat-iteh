@@ -46,4 +46,14 @@ export class CartComponent implements OnInit {
     );
   }
 
+  public onCheckout() {
+    this.cartItems.forEach((item: any) => {
+      this._cartService.deleteCartItem(item.id).subscribe(
+        result => {
+          this.getCartItems();
+        }
+      );
+    });
+  }
+
 }
