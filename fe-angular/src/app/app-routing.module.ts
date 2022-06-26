@@ -9,6 +9,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProfileComponent } from './components/profile/profile.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { TabletsComponent } from './components/tablets/tablets.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
   { path: '', redirectTo: '/products', pathMatch: 'full' },
@@ -19,8 +20,16 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'cart', component: CartComponent }
+  { 
+    path: 'profile',
+    component: ProfileComponent,
+    canActivate: [AuthGuardService] 
+  },
+  { path: 'cart',
+    component: CartComponent,
+    canActivate: [AuthGuardService]
+  },
+  { path: '**', redirectTo: '/products' }
 ];
 
 @NgModule({
